@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="assets/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -33,94 +31,57 @@
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <h1>
-            ユーザープロフィール
-          </h1>
+          <h1>ユーザー追加</h1>
           <ol class="breadcrumb">
-            <li><a href="dashboard.html"><i class="fa fa-dashboard"></i>Home</a></li>
-            <li class="active">User profile</li>
+            <li>
+              <a href="dashboard.html"><i class="fa fa-dashboard"></i>Home</a>
+            </li>
+            <li class="active">Add user</li>
           </ol>
         </section>
 
         <!-- Main content -->
         <section class="content">
           <div class="row">
-            <div class="col-md-3">
-
-              <!-- Profile Image -->
-              <div class="box box-primary">
-                <div class="box-body box-profile">
-                  <img class="profile-user-img img-responsive img-circle" src="assets/images/noavatar.png" alt="User profile picture">
-                  <h3 class="profile-username text-center">Nina Mcintire</h3>
-                  <p class="text-muted text-center">example@xxx-inc.jp</p>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-
-              <!-- About Me Box -->
-              <div class="box box-primary">
-                <div class="box-header with-border">
-                  <h3 class="box-title">会社概要</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body">
-                  <strong><i class="fa fa-book margin-r-5"></i>会社名</strong>
-                  <p class="text-muted">
-                    株式会社VERVE（ヴァーヴ）
-                  </p>
-                  <hr>
-
-                  <strong><i class="fa fa-map-marker margin-r-5"></i>所在地</strong>
-                  <p class="text-muted">東京都渋谷区渋谷3-26-18</p>
-                  <hr>
-
-                  <strong><i class="fa fa-mobile margin-r-5"></i>電話番号</strong>
-                  <p class="text-muted">
-                    012-4444-2222
-                  </p>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
             <div class="col-md-9">
-              <div class="nav-tabs-custom">
-                <ul class="nav nav-tabs">
-                  <li class="active"><a href="#activity" data-toggle="tab">会社概要</a></li>
-                  <li><a href="#settings" data-toggle="tab">パスワード変更</a></li>
-                </ul>
-
-                <div class="tab-content">
-                  <div class="active tab-pane" id="activity">
-                    <form class="form-horizontal">
+              <div class="box box-info">
+                <div class="box-header">
+                  <h3 class="box-title">会社概要</h3>
+                </div>
+                <div class="box-body">
+                  <form class="form-horizontal">
                       <div class="form-group">
                         <label for="inputName" class="col-sm-3 control-label">会社名</label>
                         <div class="col-sm-9 has-feedback">
-                          <input type="text" class="form-control" id="inputName" value="会社名">
+                          <input type="email" class="form-control" id="inputName" placeholder="会社名">
                           <span class="glyphicon glyphicon-user form-control-feedback"></span>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="inputEmail" class="col-sm-3 control-label">メール</label>
                         <div class="col-sm-9 has-feedback">
-                          <input type="email" class="form-control" id="inputEmail" value="example@xxx-inc.jp">
+                          <input type="email" class="form-control" id="inputEmail" placeholder="example@xxx-inc.jp">
                           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="inputName" class="col-sm-3 control-label">電話番号</label>
                         <div class="col-sm-9 has-feedback">
-                          <input type="text" class="form-control" id="inputName" value="012-4444-3333">
+                          <input type="text" class="form-control" id="inputName" placeholder="012-4444-3333">
                           <span class="glyphicon glyphicon-phone-alt form-control-feedback"></span>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="inputExperience" class="col-sm-3 control-label">Pass型識別子</label>
                         <div class="col-sm-9 has-feedback">
-                          <input type="text" class="form-control" id="inputExperience" value="pass.com.linkline">
+                          <input type="text" class="form-control" id="inputExperience" placeholder="pass.com.xxxx">
                           <span class="glyphicon glyphicon-tag form-control-feedback"></span>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="inputSkills" class="col-sm-3 control-label">チーム識別子</label>
                         <div class="col-sm-9 has-feedback">
-                          <input type="text" class="form-control" id="inputSkills" value="XXXXX">
+                          <input type="text" class="form-control" id="inputSkills" placeholder="XXXXX">
                           <span class="glyphicon glyphicon-briefcase form-control-feedback"></span>
                         </div>
                       </div>
@@ -133,51 +94,21 @@
                       <div class="form-group">
                         <label for="inputSkills" class="col-sm-3 control-label">証明書のパスワード</label>
                         <div class="col-sm-9 has-feedback">
-                          <input type="password" class="form-control" id="inputSkills" value="XXXXX">
+                          <input type="password" class="form-control" id="inputSkills">
                           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                         </div>
                       </div>
                       <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-9">
+                        <div class="col-sm-offset-3 col-sm-1">
                           <button type="submit" class="btn btn-danger">更新</button>
+                        </div>
+                        <div class="col-sm-4">
+                          <button type="reset" class="btn">リセット</button>
                         </div>
                       </div>
                     </form>
-                  </div><!-- /.tab-pane -->
-
-
-                  <div class="tab-pane" id="settings">
-                    <form class="form-horizontal">
-                      <div class="form-group">
-                        <label for="inputName" class="col-sm-3 control-label">古いパスワード</label>
-                        <div class="col-sm-9 has-feedback">
-                          <input type="password" class="form-control" id="inputName">
-                          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputEmail" class="col-sm-3 control-label">新しいパスワード</label>
-                        <div class="col-sm-9 has-feedback">
-                          <input type="password" class="form-control" id="inputEmail">
-                          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputName" class="col-sm-3 control-label">パスワードの確認</label>
-                        <div class="col-sm-9 has-feedback">
-                          <input type="password" class="form-control" id="inputName">
-                          <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-10">
-                          <button type="submit" class="btn btn-danger">更新</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div><!-- /.tab-pane -->
-                </div><!-- /.tab-content -->
-              </div><!-- /.nav-tabs-custom -->
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
             </div><!-- /.col -->
           </div><!-- /.row -->
         </section><!-- /.content -->
