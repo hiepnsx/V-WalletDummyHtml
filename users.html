@@ -259,7 +259,7 @@
           var file = 'views/' + $(this).data('include') + '.html';
           $(this).load(file, function() {
               $('ul.sidebar-menu').find('li').removeClass('active');
-              $('ul.sidebar-menu').find('li.profile').addClass('active');
+              $('ul.sidebar-menu').find('li.users').addClass('active');
           });
         });
         $.getScript("assets/js/app.min.js");
