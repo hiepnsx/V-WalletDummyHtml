@@ -4951,7 +4951,10 @@
         var includes = $('.include');
         jQuery.each(includes, function(){
           var file = 'views/' + $(this).data('include') + '.html';
-          $(this).load(file);
+          $(this).load(file, function() {
+              $('ul.sidebar-menu').find('li').removeClass('active');
+              $('ul.sidebar-menu').find('li.passmanager').addClass('active');
+          });
         });
         $.getScript("assets/js/app.min.js");
       });
