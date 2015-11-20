@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>V-Wallet | Create Pass</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="assets/css/skins/base-skins.min.css">
+    <link rel="stylesheet" href="assets/css/createPass.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- DataTables -->
+    <link rel="stylesheet" href="assets/plugins/datatables/dataTables.bootstrap.css">
+    <style type="text/css">
+        @media all and (transform-3d),
+        (-o-transform-3d),
+        (-moz-transform-3d),
+        (-ms-transform-3d),
+        (-webkit-transform-3d) {
+            #back.backPass {
+                display: inline;
+            }
+            .backPass {
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+            #pass,
+            #back,
+            details,
+            .animate {
+                -webkit-transition: -webkit-transform .7s linear;
+                -moz-transition: -moz-transform .7s linear;
+                -o-transition: -o-transform .7s linear;
+                transition: transform .7s linear;
+            }
+            #back,
+            #pass {
+                -webkit-backface-visibility: hidden!important;
+                -moz-backface-visibility: hidden;
+                -o-backface-visibility: hidden;
+                -ms-backface-visibility: hidden!important;
+                backface-visibility: hidden!important;
+            }
+        }
+    </style>
+    <style id="cpf">
+        .foreground {
+            color: #FFFFFF;
+        }
+        .coupon .p1.label,
+        .storeCard .p1.label {
+            color: #FFFFFF;
+        }
+    </style>
+    <style id="cpl">
+        .label {
+            color: #515254;
+        }
+        .boardingPass span.pin {
+            background: url('https://d1ye292yvr7tf6.cloudfront.net/images/dpin.php?c1=515254') no-repeat;
+        }
+        .air {
+            background: url('https://d1ye292yvr7tf6.cloudfront.net/images/plane.php?c1=515254') no-repeat;
+        }
+        .train {
+            background: url('https://d1ye292yvr7tf6.cloudfront.net/images/train.php?c1=515254') no-repeat;
+        }
+        .bus {
+            background: url('https://d1ye292yvr7tf6.cloudfront.net/images/bus.php?c1=515254') no-repeat;
+        }
+        .boat {
+            background: url('https://d1ye292yvr7tf6.cloudfront.net/images/boat.php?c1=515254') no-repeat;
+        }
+        .gen {
+            background: url('https://d1ye292yvr7tf6.cloudfront.net/images/gen.php?c1=515254') no-repeat;
+        }
+    </style>
+
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper hold-transition skin-blue sidebar-mini">
+    <div class="include" data-include="header"></div>
+    <div class="include" data-include="left_sidebar"></div>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Dashboard
+            <small>Version 2.0</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+          </ol>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+          <!-- Info boxes -->
+
+
+
+
+<div id="webWrapper" style="position:relative;width:270px;margin:0 auto;">
+    <div id="webPassContent" style="width:270px;margin:0 auto;overflow-x:hidden!important;">
+        <div id="pass" class="pass" style="background: rgb(109, 110, 113);">
+            <!-- Masks -->
+            <div class="couponTop"></div>
+            <div class="couponBottom"></div>
+            <div class="eventTicketTop"></div>
+            <div class="storeTop"></div>
+            <div class="boardingTop"></div>
+            <div class="genericTop"></div>
+            <img class="eventImage" src="https://d1ye292yvr7tf6.cloudfront.net/images/z.gif" alt="Background">
+
+            <!-- Graphics -->
+            <div class="passLogo foreground">
+                <img id="logoImage" src="https://d1v6vxpmctmtey.cloudfront.net/images/2VAVHwB0VIHFqiC6cPS8dYl2x.png" alt="Logo">
+                <!-- <img src="images/z50.gif" alt="" class="z" /> -->
+                <p id="logoText">test Logo Text</p>
+            </div>
+            <div id="transport" class="transport gen"></div>
+            <div class="back" style="background-image: url('https://d1v6vxpmctmtey.cloudfront.net/images/51EcgTXDLLQdTkhMuR5l7Es2x.png');"></div>
+            <div class="stripShine"></div>
+            <div class="thumbnail">
+                <div class="tinner">
+                    <img id="thumbnail" src="https://d1ye292yvr7tf6.cloudfront.net/images/z.gif" alt="Thumbnail">
+                </div>
+            </div>
+            <span class="info"> </span>
+
+            <!-- Pass Fields -->
+            <!-- Header Row -->
+            <div class="header" id="header" data-m="10" data-s="11">
+                <div class="labels">
+                    <div id="h1L" class="label h1" style="width: 50px; margin-left: 0px; margin-right: 0px;">value 1</div>
+                    <div id="h2L" class="label h2" style="display: none;"></div>
+                    <div id="h3L" class="label h3" style="display: none;"></div>
+                </div>
+                <div class="values">
+                    <span id="h1V" class="foreground h1" style="width: 50px; margin-left: 0px; margin-right: 0px;">data 1</span><span id="h2V" class="foreground h2" style="display: none;"></span><span id="h3V" class="foreground h3" style="display: none;"></span>
+                </div>
+            </div>
+            <div class="primary" id="primary" data-m="0" data-s="58">
+                <div class="labels">
+                    <div id="p1L" class="label p1" style="width: 166px; margin-left: 0px; margin-right: 0px; text-align: left; color: rgb(255, 255, 255);">value 2</div>
+                    <div id="p2L" class="label p2" style="display: none; text-align: left;"></div>
+                </div>
+                <div class="values">
+                    <span id="p1V" class="foreground p1" style="width: 166px; margin-left: 0px; margin-right: 0px; text-align: left; color: rgb(255, 255, 255);">data 2</span><span id="p2V" class="foreground p2" style="display: none; text-align: left;"></span>
+                </div>
+            </div>
+            <div class="secondary" id="secondary" data-m="14" data-s="10">
+                <div class="labels">
+                    <div id="s1L" class="label s1" style="display: none; text-align: left;"></div>
+                    <div id="s2L" class="label s2" style="display: none; text-align: left;"></div>
+                    <div id="s3L" class="label s3" style="display: none; text-align: left;"></div>
+                    <div id="s4L" class="label s4" style="display: none; text-align: left;"></div>
+                </div>
+                <div class="values">
+                    <span id="s1V" class="foreground s1" style="display: none; text-align: left;"></span><span id="s2V" class="foreground s2" style="display: none; text-align: left;"></span><span id="s3V" class="foreground s3" style="display: none; text-align: left;"></span><span id="s4V" class="foreground s4" style="display: none; text-align: left;"></span>
+                </div>
+            </div>
+            <div class="auxiliary" id="auxiliary" data-m="14" data-s="9">
+                <div class="labels">
+                    <div id="a1L" class="label a1" style="width: 40px; margin-left: 0px; margin-right: 0px; text-align: left;">test</div>
+                    <div id="a2L" class="label a2" style="display: none; text-align: left;"></div>
+                    <div id="a3L" class="label a3" style="display: none; text-align: left;"></div>
+                    <div id="a4L" class="label a4" style="display: none; text-align: left;"></div>
+                    <div id="a5L" class="label a5" style="display: none; text-align: left;"></div>
+                </div>
+                <div class="values">
+                    <span id="a1V" class="foreground a1" style="width: 40px; margin-left: 0px; margin-right: 0px; text-align: left;">test</span><span id="a2V" class="foreground a2" style="display: none; text-align: left;"></span><span id="a3V" class="foreground a3" style="display: none; text-align: left;"></span><span id="a4V" class="foreground a4" style="display: none; text-align: left;"></span><span id="a5V" class="foreground a5" style="display: none; text-align: left;"></span>
+                </div>
+            </div>
+            <!-- Barcode -->
+            <div class="barcodeOuter">
+                <img id="footerImage" src="https://d1ye292yvr7tf6.cloudfront.net/images/z.gif" alt="Footer">
+                <div class="barcodeHack">
+                    <div id="barcodeContainer" class="nobc">
+                        <div id="barcode">
+                            <img src="https://d1ye292yvr7tf6.cloudfront.net/images/barcode.php?m=https://PassKit.com&amp;f=pdf417&amp;x2=1" alt="Barcode">
+                        </div>
+                        <p id="barcodeText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="back" class="pass animate backPass" style="background: rgb(109, 110, 113);">
+
+            <!-- Masks -->
+            <div class="couponTop"></div>
+            <div class="storeTop"></div>
+            <img class="eventImage" src="https://d1ye292yvr7tf6.cloudfront.net/images/z.gif" alt="Background">
+            <p class="update bdone label"></p>
+            <button class="done bdone label">Done</button>
+            <div class="backOuter">
+                <div class="backHack">
+                    <div id="backContent" class="backInner">
+
+                        <div id="b1">
+                            <div id="b1L" class="label b1" style="display: inline-block;">value 1</div>
+                            <div id="b1V" class="foreground b1" style="display: inline-block; font-size: 15px;">23432423434</div>
+                        </div>
+                        <div id="b2">
+                            <div id="b2L" class="label b2" style="display: inline-block;">value 2</div>
+                            <div id="b2V" class="foreground b2" style="display: inline-block; font-size: 15px;">data 2</div>
+                        </div>
+                        <div id="b3">
+                            <div id="b3L" class="label b3" style="display: inline-block;">Legal Notice</div>
+                            <div id="b3V" class="foreground b3" style="display: inline-block; font-size: 9px;">This pass has been created using a third party service, PassKit, that is owned and operated by:
+                                <br>
+                                <br>PassKit, Inc.,
+                                <br>Golden Sun Centre,
+                                <br>59-67 Bonham Strand West,
+                                <br>Sheung Wan, Hong Kong SAR
+                                <br>Tel: +852 5804 9280
+                                <br><a href="https://passkit.com" target="_blank">https://passkit.com</a> <a href="mailto:support@passkit.com">support@passkit.com</a>
+                                <br>
+                                <br>The Pass Issuer has attested that any trademarks and/or copyrighted content contained within this pass are being used with the consent of the owner.
+                                <br>
+                                <br>Questions, complaints, or claims with respect to this pass should first be addressed to the Pass Issuer.
+                                <br>
+                                <br>NEITHER APPLE NOR PASSKIT SHALL BE LIABLE FOR ANY DAMAGES OR LOSSES ARISING FROM ANY USE, DISTRIBUTION, MISUSE, RELIANCE ON, INABILITY TO USE, INTERRUPTION, SUSPENSION, OR TERMINATION OF APPLE WALLET, THIS PASS, OR ANY SERVICES PROVIDED IN CONNECTION THEREWITH, INCLUDING BUT NOT LIMITED TO ANY LOSS OR FAILURE TO DISPLAY YOUR PASS IN APPLE WALLET OR ANY CLAIM ARISING FROM ANY USE OF THE FOREGOING BY YOU, THE PASS USER.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Pass Back Face -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+        </section>
+      </div><!-- /.content-wrapper -->
+
+
+    <div class="include" data-include="footer"></div>
+
+    </div><!-- ./wrapper -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="assets/plugins/jQueryUI/jquery-ui.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="assets/plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <!--  <script src="assets/js/app.min.js"></script> -->
+    <!-- SlimScroll 1.3.0 -->
+    <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="//d1ye292yvr7tf6.cloudfront.net/images/walletpicker/wallet-picker.js?build=4310"></script>
+
+    <script>
+      $(function(){
+        var includes = $('.include');
+        jQuery.each(includes, function(){
+          var file = 'views/' + $(this).data('include') + '.html';
+          $(this).load(file);
+        });
+        $.getScript("assets/js/app.min.js");
+      });
+    </script>
+<script>
+    var bpass=true;
+
+    $(window).load(function() {
+        init();
+        setup_sim();
+
+        $('.info').click(function() {
+            $('#pass').addClass('backPass');
+            $('#back').removeClass('backPass');
+            shrinkBackfields();
+        });
+
+        $('.done').click(function() {
+            $('#back').addClass('backPass');
+            $('#pass').removeClass('backPass');
+        });
+    });
+    </script>
+  </body>
+</html>
