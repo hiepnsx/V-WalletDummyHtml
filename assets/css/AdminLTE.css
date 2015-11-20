@@ -4727,3 +4727,6 @@ table.text-center th {
     white-space: normal!important;
   }
 }
+.innerbox {
+  padding: 6px 12px;
+}
