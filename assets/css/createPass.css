@@ -1332,14 +1332,14 @@ p.lockScreen {
 }
 #header .labels {
     position: absolute;
-    bottom: 320px;
+    bottom: 335px;
     right: 13px;
     height: 13px;
     text-align: right
 }
 #header .values {
     position: absolute;
-    bottom: 295px;
+    bottom: 308px;
     right: 13px;
     text-align: right;
     height: 22px;

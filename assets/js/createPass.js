@@ -1,17 +1,3 @@
-/* PassKit Online Pass Generator Javascript
- *
- *  Copyright Notice
- *
- *  The following code is Copyright 2012-13 Passkit, Inc. & Anatta Limited - All Rights Reserved
- *
- *  No person may copy, modify, merge, publish, distribute, sub-license, and/or
- *  sell copies of the code reproduced below without the express written permission
- *  of the copyright owner.
- *
- *  If you would like to use any portion of the code below then permission can be
- *  requested via email to hello@passk.it (if you ask nicely, we may even let you
- *  use it).
- */
 /* Dynamic language and runtime variables */
 var aws_bucket = "passkit";
 var gmaps_noaddress = "Sorry, Google Maps could not find that address, please change and try again";

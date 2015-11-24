@@ -420,65 +420,580 @@
                             <div id="hEditFields" class="ui-sortable">
                                 <div id="h1fsH" class="fieldsetHolder" data-cstatus="false">
                                     <fieldset id="h1fields" name="h1">
-                                        <div class="sortableFieldHandle ui-corner-all ui-icon-arrowthick-2-n-s"></div>
+                                    <div class="sortableFieldHandle ui-corner-all ui-icon-arrowthick-2-n-s"></div>
+                                    <div class="fieldLabel">
+                                        <p>
+                                            <input class="iCheckbox factive" type="checkbox" value="1" id="h1Active" name="h1" style="opacity:1">
+                                            <label for="h1Active"> <a data-tip="">&nbsp;項目名</a><span class="rqd">*</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div id="h1labelF">
                                         <div class="fieldLabel">
-                                            <p>
-                                                <input class="iCheckbox factive" type="checkbox" value="1" id="h1Active" name="h1" style="opacity:1;">
-                                                <label for="h1Active"> <a data-tip="A name used to identify this pass element. This name must be unique within the scope of the entire pass.  It is used when supplying data to create passes and when updating passes via the API. Uncheck the box if this pass element is not required.">&nbsp;項目名</a><span class="rqd">*</span>
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <div id="h1labelF">
-                                            <div class="fieldLabel">
-                                                <p><a data-tip="項目ラベル">項目ラベル</a>
-                                                </p>
-                                            </div>
-                                            <div class="staticDynamicI">
-                                                <input type="text" data-sid="h1L" class="iLabel stath1l" data-op="h1Labeld" id="h1Labels" name="h1l" value="" placeholder="Required">
-                                            </div>
-                                            <div class="fieldBreak"></div>
-                                        </div>
-                                        <div class="fieldLabel">
-                                            <p><a data-tip="項目データ">項目データ</a>
+                                            <p><a data-tip="項目ラベル">項目ラベル</a>
                                             </p>
                                         </div>
                                         <div class="staticDynamicI">
-                                            <input type="text" data-sid="h1V" class="iValue disabled stath1v" disabled="disabled" data-op="h1Datad" id="h1Datas" data-ov="" name="h1v" placeholder="Required" value=""><span class="remove iVr"><a class="removeDate" data-tip="Clear date and time">X</a></span>
+                                            <input type="text" data-sid="h1L" class="iLabel stath1l" data-op="h1Labeld" id="h1Labels" name="h1l" value="" placeholder="Optional">
                                         </div>
-                                        <div class="clear"></div>
-                                    </fieldset>
+                                        <div class="fieldLabel">&nbsp;</div>
+                                        <div class="fieldBreak"></div>
+                                    </div>
+                                    <div class="fieldLabel">
+                                        <p><a data-tip="項目データ">項目データ</a>
+                                        </p>
+                                    </div>
+                                    <div class="staticDynamicI">
+                                        <input type="text" data-sid="h1V" class="iValue statdh1v" data-op="h1Datas" id="h1Datad" data-ov="" name="h1v" placeholder="Optional" value="">
+                                    </div>
+                                    <div class="fieldBreak"></div>
+                                    <div class="clear"></div>
+                                    <div class="fieldLabel">&nbsp;</div>
+                                    <details>
+                                        <summary role="button" aria-expanded="false">Formatting Options</summary>
+                                        <div>
+                                            <div class="inline">
+                                                <p><a data-tip="Unless you specifically need the device to format your data, there is no need to change this field. In general, you will have more control over the appearance of your pass if you provide data that is pre-formatted.">Data Type</a>
+                                                </p>
+                                                <div class="styled-select">
+                                                    <select id="h1Type" data-sid="h1V" name="h1t" class="sType">
+                                                        <option value="text" selected="selected">Text</option>
+                                                        <option value="number">Number</option>
+                                                        <option value="currency">Currency</option>
+                                                        <option value="date">Date</option>
+                                                        <option value="datetime">Date &amp; Time</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="inline CFormat">
+                                                <p><a data-tip="Select the currency of this item. Currencies will be displayed relative to the user's region preferences so 50 USD would be displayed as $50.00 on a phone with its region set to United States and US$50.00 on a phone with its region set to Canada.">Currency</a>
+                                                </p>
+                                                <div class="styled-select">
+                                                    <select id="h1Currency" data-sid="h1V" name="h1c" class="currencySelect">
+                                                        <option value="ADP">ADP (Andorran Peseta)</option>
+                                                        <option value="AED">AED (United Arab Emirates Dirham)</option>
+                                                        <option value="AFN">AFN (Afghan Afghani)</option>
+                                                        <option value="ALL">ALL (Albanian Lek)</option>
+                                                        <option value="AMD">AMD (Armenian Dram)</option>
+                                                        <option value="ANG">ANG (Netherlands Antillean Guilder)</option>
+                                                        <option value="AOA">AOA (Angolan Kwanza)</option>
+                                                        <option value="ARS">ARS (Argentine Peso)</option>
+                                                        <option value="ATS">ATS (Austrian Schilling)</option>
+                                                        <option value="AUD">AUD (Australian Dollar)</option>
+                                                        <option value="AWG">AWG (Aruban Florin)</option>
+                                                        <option value="AZN">AZN (Azerbaijani Manat)</option>
+                                                        <option value="BAM">BAM (Bosnia-Herzegovina Convertible Mark)</option>
+                                                        <option value="BBD">BBD (Barbadian Dollar)</option>
+                                                        <option value="BDT">BDT (Bangladeshi Taka)</option>
+                                                        <option value="BEF">BEF (Belgian Franc)</option>
+                                                        <option value="BGN">BGN (Bulgarian Lev)</option>
+                                                        <option value="BHD">BHD (Bahraini Dinar)</option>
+                                                        <option value="BIF">BIF (Burundian Franc)</option>
+                                                        <option value="BMD">BMD (Bermudan Dollar)</option>
+                                                        <option value="BND">BND (Brunei Dollar)</option>
+                                                        <option value="BOB">BOB (Bolivian Boliviano)</option>
+                                                        <option value="BRL">BRL (Brazilian Real)</option>
+                                                        <option value="BSD">BSD (Bahamian Dollar)</option>
+                                                        <option value="BTN">BTN (Bhutanese Ngultrum)</option>
+                                                        <option value="BWP">BWP (Botswanan Pula)</option>
+                                                        <option value="BYR">BYR (Belarusian Ruble)</option>
+                                                        <option value="BZD">BZD (Belize Dollar)</option>
+                                                        <option value="CAD">CAD (Canadian Dollar)</option>
+                                                        <option value="CDF">CDF (Congolese Franc)</option>
+                                                        <option value="CHF">CHF (Swiss Franc)</option>
+                                                        <option value="CLP">CLP (Chilean Peso)</option>
+                                                        <option value="CNY">CNY (Chinese Yuan Renminbi)</option>
+                                                        <option value="COP">COP (Colombian Peso)</option>
+                                                        <option value="CRC">CRC (Costa Rican Colón)</option>
+                                                        <option value="CSK">CSK (Czechoslovak Hard Koruna)</option>
+                                                        <option value="CUC">CUC (Cuban Convertible Peso)</option>
+                                                        <option value="CUP">CUP (Cuban Peso)</option>
+                                                        <option value="CVE">CVE (Cape Verdean Escudo)</option>
+                                                        <option value="CYP">CYP (Cypriot Pound)</option>
+                                                        <option value="CZK">CZK (Czech Republic Koruna)</option>
+                                                        <option value="DEM">DEM (German Mark)</option>
+                                                        <option value="DJF">DJF (Djiboutian Franc)</option>
+                                                        <option value="DKK">DKK (Danish Krone)</option>
+                                                        <option value="DOP">DOP (Dominican Peso)</option>
+                                                        <option value="DZD">DZD (Algerian Dinar)</option>
+                                                        <option value="ECS">ECS (Ecuadorian Sucre)</option>
+                                                        <option value="EEK">EEK (Estonian Kroon)</option>
+                                                        <option value="EGP">EGP (Egyptian Pound)</option>
+                                                        <option value="ESP">ESP (Spanish Peseta)</option>
+                                                        <option value="ETB">ETB (Ethiopian Birr)</option>
+                                                        <option value="EUR">EUR (Euro)</option>
+                                                        <option value="FIM">FIM (Finnish Markka)</option>
+                                                        <option value="FJD">FJD (Fijian Dollar)</option>
+                                                        <option value="FKP">FKP (Falkland Islands Pound)</option>
+                                                        <option value="FRF">FRF (French Franc)</option>
+                                                        <option value="GBP">GBP (British Pound Sterling)</option>
+                                                        <option value="GEL">GEL (Georgian Lari)</option>
+                                                        <option value="GHS">GHS (Ghanaian Cedi)</option>
+                                                        <option value="GIP">GIP (Gibraltar Pound)</option>
+                                                        <option value="GMD">GMD (Gambian Dalasi)</option>
+                                                        <option value="GNF">GNF (Guinean Franc)</option>
+                                                        <option value="GRD">GRD (Greek Drachma)</option>
+                                                        <option value="GTQ">GTQ (Guatemalan Quetzal)</option>
+                                                        <option value="GYD">GYD (Guyanaese Dollar)</option>
+                                                        <option value="HKD">HKD (Hong Kong Dollar)</option>
+                                                        <option value="HNL">HNL (Honduran Lempira)</option>
+                                                        <option value="HRK">HRK (Croatian Kuna)</option>
+                                                        <option value="HTG">HTG (Haitian Gourde)</option>
+                                                        <option value="HUF">HUF (Hungarian Forint)</option>
+                                                        <option value="IDR">IDR (Indonesian Rupiah)</option>
+                                                        <option value="IEP">IEP (Irish Pound)</option>
+                                                        <option value="ILS">ILS (Israeli New Sheqel)</option>
+                                                        <option value="INR">INR (Indian Rupee)</option>
+                                                        <option value="IQD">IQD (Iraqi Dinar)</option>
+                                                        <option value="IRR">IRR (Iranian Rial)</option>
+                                                        <option value="ISK">ISK (Icelandic Króna)</option>
+                                                        <option value="ITL">ITL (Italian Lira)</option>
+                                                        <option value="JMD">JMD (Jamaican Dollar)</option>
+                                                        <option value="JOD">JOD (Jordanian Dinar)</option>
+                                                        <option value="JPY">JPY (Japanese Yen)</option>
+                                                        <option value="KES">KES (Kenyan Shilling)</option>
+                                                        <option value="KGS">KGS (Kyrgystani Som)</option>
+                                                        <option value="KHR">KHR (Cambodian Riel)</option>
+                                                        <option value="KMF">KMF (Comorian Franc)</option>
+                                                        <option value="KPW">KPW (North Korean Won)</option>
+                                                        <option value="KRW">KRW (South Korean Won)</option>
+                                                        <option value="KWD">KWD (Kuwaiti Dinar)</option>
+                                                        <option value="KYD">KYD (Cayman Islands Dollar)</option>
+                                                        <option value="KZT">KZT (Kazakhstan Tenge)</option>
+                                                        <option value="LAK">LAK (Laotian Kip)</option>
+                                                        <option value="LBP">LBP (Lebanese Pound)</option>
+                                                        <option value="LKR">LKR (Sri Lanka Rupee)</option>
+                                                        <option value="LRD">LRD (Liberian Dollar)</option>
+                                                        <option value="LSL">LSL (Lesotho Loti)</option>
+                                                        <option value="LTL">LTL (Lithuanian Litas)</option>
+                                                        <option value="LUF">LUF (Luxembourgian Franc)</option>
+                                                        <option value="LVL">LVL (Latvian Lats)</option>
+                                                        <option value="LYD">LYD (Libyan Dinar)</option>
+                                                        <option value="MAD">MAD (Moroccan Dirham)</option>
+                                                        <option value="MDL">MDL (Moldovan Leu)</option>
+                                                        <option value="MGF">MGF (Malagasy Franc)</option>
+                                                        <option value="MKD">MKD (Macedonian Denar)</option>
+                                                        <option value="MMK">MMK (Myanma Kyat)</option>
+                                                        <option value="MNT">MNT (Mongolian Tugrik)</option>
+                                                        <option value="MOP">MOP (Macanese Pataca)</option>
+                                                        <option value="MRO">MRO (Mauritanian Ouguiya)</option>
+                                                        <option value="MTL">MTL (Maltese Lira)</option>
+                                                        <option value="MUR">MUR (Mauritian Rupee)</option>
+                                                        <option value="MVR">MVR (Maldivian Rufiyaa)</option>
+                                                        <option value="MWK">MWK (Malawian Kwacha)</option>
+                                                        <option value="MXN">MXN (Mexican Peso)</option>
+                                                        <option value="MYR">MYR (Malaysian Ringgit)</option>
+                                                        <option value="MZM">MZM (Old Mozambican Metical)</option>
+                                                        <option value="MZN">MZN (Mozambican Metical)</option>
+                                                        <option value="NAD">NAD (Namibian Dollar)</option>
+                                                        <option value="NGN">NGN (Nigerian Naira)</option>
+                                                        <option value="NIO">NIO (Nicaraguan Cordoba Oro)</option>
+                                                        <option value="NLG">NLG (Dutch Guilder)</option>
+                                                        <option value="NOK">NOK (Norwegian Krone)</option>
+                                                        <option value="NPR">NPR (Nepalese Rupee)</option>
+                                                        <option value="NZD">NZD (New Zealand Dollar)</option>
+                                                        <option value="OMR">OMR (Omani Rial)</option>
+                                                        <option value="PAB">PAB (Panamanian Balboa)</option>
+                                                        <option value="PEN">PEN (Peruvian Nuevo Sol)</option>
+                                                        <option value="PGK">PGK (Papua New Guinean Kina)</option>
+                                                        <option value="PHP">PHP (Philippine Peso)</option>
+                                                        <option value="PKR">PKR (Pakistani Rupee)</option>
+                                                        <option value="PLN">PLN (Polish Zloty)</option>
+                                                        <option value="PTE">PTE (Portuguese Escudo)</option>
+                                                        <option value="PYG">PYG (Paraguayan Guarani)</option>
+                                                        <option value="QAR">QAR (Qatari Rial)</option>
+                                                        <option value="ROL">ROL (Old Romanian Leu)</option>
+                                                        <option value="RON">RON (Romanian Leu)</option>
+                                                        <option value="RSD">RSD (Serbian Dinar)</option>
+                                                        <option value="RUB">RUB (Russian Ruble)</option>
+                                                        <option value="SAR">SAR (Saudi Riyal)</option>
+                                                        <option value="SBD">SBD (Solomon Islands Dollar)</option>
+                                                        <option value="SCR">SCR (Seychellois Rupee)</option>
+                                                        <option value="SDD">SDD (Old Sudanese Dinar)</option>
+                                                        <option value="SDG">SDG (Sudanese Pound)</option>
+                                                        <option value="SDP">SDP (Old Sudanese Pound)</option>
+                                                        <option value="SEK">SEK (Swedish Krona)</option>
+                                                        <option value="SGD">SGD (Singapore Dollar)</option>
+                                                        <option value="SHP">SHP (Saint Helena Pound)</option>
+                                                        <option value="SIT">SIT (Slovenian Tolar)</option>
+                                                        <option value="SKK">SKK (Slovak Koruna)</option>
+                                                        <option value="SLL">SLL (Sierra Leonean Leone)</option>
+                                                        <option value="SOS">SOS (Somali Shilling)</option>
+                                                        <option value="SRD">SRD (Surinamese Dollar)</option>
+                                                        <option value="SRG">SRG (Suriname Guilder)</option>
+                                                        <option value="STD">STD (São Tomé and Príncipe Dobra)</option>
+                                                        <option value="SVC">SVC (Salvadoran Colón)</option>
+                                                        <option value="SYP">SYP (Syrian Pound)</option>
+                                                        <option value="SZL">SZL (Swazi Lilangeni)</option>
+                                                        <option value="THB">THB (Thai Baht)</option>
+                                                        <option value="TMM">TMM (Turkmenistani Manat)</option>
+                                                        <option value="TND">TND (Tunisian Dinar)</option>
+                                                        <option value="TOP">TOP (Tongan Paʻanga)</option>
+                                                        <option value="TRL">TRL (Old Turkish Lira)</option>
+                                                        <option value="TRY">TRY (Turkish Lira)</option>
+                                                        <option value="TTD">TTD (Trinidad and Tobago Dollar)</option>
+                                                        <option value="TWD">TWD (New Taiwan Dollar)</option>
+                                                        <option value="TZS">TZS (Tanzanian Shilling)</option>
+                                                        <option value="UAH">UAH (Ukrainian Hryvnia)</option>
+                                                        <option value="USD" selected="selected">USD (US Dollar)</option>
+                                                        <option value="UYU">UYU (Uruguayan Peso)</option>
+                                                        <option value="UZS">UZS (Uzbekistan Som)</option>
+                                                        <option value="VEF">VEF (Venezuelan Bolívar Fuerte)</option>
+                                                        <option value="VND">VND (Vietnamese Dong)</option>
+                                                        <option value="VUV">VUV (Vanuatu Vatu)</option>
+                                                        <option value="WST">WST (Samoan Tala)</option>
+                                                        <option value="XAF">XAF (CFA Franc BEAC)</option>
+                                                        <option value="XCD">XCD (East Caribbean Dollar)</option>
+                                                        <option value="XOF">XOF (CFA Franc BCEAO)</option>
+                                                        <option value="XPF">XPF (CFP Franc)</option>
+                                                        <option value="YER">YER (Yemeni Rial)</option>
+                                                        <option value="YUN">YUN (Yugoslavian Convertible Dinar)</option>
+                                                        <option value="ZAR">ZAR (South African Rand)</option>
+                                                        <option value="ZMK">ZMK (Zambian Kwacha)</option>
+                                                        <option value="ZWD">ZWD (Zimbabwean Dollar)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="inline NFormat">
+                                                <p><a data-tip="Select how numbers will be displayed. Note that limited space on the pass may cause longer formats to be truncated.">Number Format</a>
+                                                </p>
+                                                <div class="styled-select">
+                                                    <select id="h1Nformat" class="dataFormat" data-sid="h1V" name="h1nf">
+                                                        <option value="decimal" selected="selected">Decimal</option>
+                                                        <option value="percentage">Percentage</option>
+                                                        <option value="scientific">Scientific</option>
+                                                        <option value="spell">Spell Out</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="inline DFormat">
+                                                <p><a data-tip="Select how dates and times will be displayed. Note that limited space on the pass may cause longer formats to be truncated.">Date/Time Format</a>
+                                                </p>
+                                                <div class="styled-select">
+                                                    <select id="h1Dformat" class="dataFormat" data-sid="h1V" name="h1df">
+                                                        <option value="short">Short</option>
+                                                        <option value="medium" selected="selected">Medium</option>
+                                                        <option value="long">Long</option>
+                                                        <option value="full">Full</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="inline DRelative">
+                                                <p><a data-tip="Check this option to display dates relative to the current time (E.g. display 'Today' instead of 'July 4 2013')">Relative Date</a>
+                                                </p>
+                                                <p class="foo">
+                                                    <input type="checkbox" id="h1Relative" value="1" name="h1r">
+                                                    <label for="h1Relative">&nbsp;Display relatively</label>
+                                                </p>
+                                            </div>
+                                            <div class="inline DRelative">
+                                                <p><a data-tip="Do not adjust the date to account for the device timezone.">Ignore timezone<span class="ios7"></span></a>
+                                                </p>
+                                                <p class="foo">
+                                                    <input type="checkbox" id="h1Itz" value="1" name="h1z">
+                                                    <label for="h1Itz">&nbsp;</label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </fieldset>
                                 </div>
 
-<div id="h1fsH" class="fieldsetHolder" data-cstatus="false">
-                                    <fieldset id="h1fields" name="h1">
-                                        <div class="sortableFieldHandle ui-corner-all ui-icon-arrowthick-2-n-s"></div>
-                                        <div class="fieldLabel">
-                                            <p>
-                                                <input class="iCheckbox factive" type="checkbox" value="1" id="h1Active" name="h1" style="opacity:1;">
-                                                <label for="h1Active"> <a data-tip="A name used to identify this pass element. This name must be unique within the scope of the entire pass.  It is used when supplying data to create passes and when updating passes via the API. Uncheck the box if this pass element is not required.">&nbsp;項目名</a><span class="rqd">*</span>
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <div id="h1labelF">
-                                            <div class="fieldLabel">
-                                                <p><a data-tip="項目ラベル">項目ラベル</a>
-                                                </p>
-                                            </div>
-                                            <div class="staticDynamicI">
-                                                <input type="text" data-sid="h1L" class="iLabel stath1l" data-op="h1Labeld" id="h1Labels" name="h1l" value="" placeholder="Required">
-                                            </div>
-                                            <div class="fieldBreak"></div>
-                                        </div>
-                                        <div class="fieldLabel">
-                                            <p><a data-tip="項目データ">項目データ</a>
-                                            </p>
-                                        </div>
-                                        <div class="staticDynamicI">
-                                            <input type="text" data-sid="h1V" class="iValue disabled stath1v" disabled="disabled" data-op="h1Datad" id="h1Datas" data-ov="" name="h1v" placeholder="Required" value=""><span class="remove iVr"><a class="removeDate" data-tip="Clear date and time">X</a></span>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </fieldset>
-                                </div>
+
+
+<div id="p1fsH" class="fieldsetHolder" data-cstatus="false">
+    <fieldset id="p1fields" name="p1">
+        <div class="sortableFieldHandle ui-corner-all ui-icon-arrowthick-2-n-s" style="display: none;"></div>
+        <div class="fieldLabel">
+            <p>
+                <input class="iCheckbox factive" type="checkbox" value="1" id="p1Active" name="p1" style="opacity:1">
+                <label for="p1Active"> <a data-tip="項目ラベル">&nbsp;項目ラベル</a><span class="rqd">*</span>
+                </label>
+            </p>
+        </div>
+        <div id="p1labelF">
+            <div class="fieldLabel">
+                <p><a data-tip="項目ラベル">項目ラベル</a>
+                </p>
+            </div>
+            <div class="staticDynamicI">
+                <input type="text" data-sid="p1L" class="iLabel statp1l" data-op="p1Labeld" id="p1Labels" name="p1l" value="" placeholder="Required">
+            </div>
+            <div class="fieldLabel">&nbsp;</div>
+            <div class="fieldBreak"></div>
+        </div>
+        <div class="fieldLabel">
+            <p><a data-tip="項目データ">項目データ</a>
+            </p>
+        </div>
+        <div class="staticDynamicI">
+            <input type="text" data-sid="p1V" class="iValue statdp1v" data-op="p1Datas" id="p1Datad" data-ov="" name="p1v" placeholder="Optional" value="">
+        </div>
+        <div class="fieldBreak"></div>
+        <div class="clear"></div>
+        <div class="fieldLabel">&nbsp;</div>
+        <details>
+            <summary role="button" aria-expanded="false">Formatting Options</summary>
+            <div>
+                <div id="p1A" class="inline">
+                    <p><a data-tip="">Text Alignment</a>
+                    </p>
+                    <div class="styled-select">
+                        <select id="p1Align" name="p1a" class="sAlign">
+                            <option value="left" selected="selected">Left</option>
+                            <option value="right">Right</option>
+                            <option value="center">Center</option>
+                            <option value="natural">Natural</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inline">
+                    <p><a data-tip="Unless you specifically need the device to format your data, there is no need to change this field. In general, you will have more control over the appearance of your pass if you provide data that is pre-formatted.">Data Type</a>
+                    </p>
+                    <div class="styled-select">
+                        <select id="p1Type" data-sid="p1V" name="p1t" class="sType">
+                            <option value="text" selected="selected">Text</option>
+                            <option value="number">Number</option>
+                            <option value="currency">Currency</option>
+                            <option value="date">Date</option>
+                            <option value="datetime">Date &amp; Time</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inline CFormat">
+                    <p><a data-tip="Select the currency of this item. Currencies will be displayed relative to the user's region preferences so 50 USD would be displayed as $50.00 on a phone with its region set to United States and US$50.00 on a phone with its region set to Canada.">Currency</a>
+                    </p>
+                    <div class="styled-select">
+                        <select id="p1Currency" data-sid="p1V" name="p1c" class="currencySelect">
+                            <option value="ADP">ADP (Andorran Peseta)</option>
+                            <option value="AED">AED (United Arab Emirates Dirham)</option>
+                            <option value="AFN">AFN (Afghan Afghani)</option>
+                            <option value="ALL">ALL (Albanian Lek)</option>
+                            <option value="AMD">AMD (Armenian Dram)</option>
+                            <option value="ANG">ANG (Netherlands Antillean Guilder)</option>
+                            <option value="AOA">AOA (Angolan Kwanza)</option>
+                            <option value="ARS">ARS (Argentine Peso)</option>
+                            <option value="ATS">ATS (Austrian Schilling)</option>
+                            <option value="AUD">AUD (Australian Dollar)</option>
+                            <option value="AWG">AWG (Aruban Florin)</option>
+                            <option value="AZN">AZN (Azerbaijani Manat)</option>
+                            <option value="BAM">BAM (Bosnia-Herzegovina Convertible Mark)</option>
+                            <option value="BBD">BBD (Barbadian Dollar)</option>
+                            <option value="BDT">BDT (Bangladeshi Taka)</option>
+                            <option value="BEF">BEF (Belgian Franc)</option>
+                            <option value="BGN">BGN (Bulgarian Lev)</option>
+                            <option value="BHD">BHD (Bahraini Dinar)</option>
+                            <option value="BIF">BIF (Burundian Franc)</option>
+                            <option value="BMD">BMD (Bermudan Dollar)</option>
+                            <option value="BND">BND (Brunei Dollar)</option>
+                            <option value="BOB">BOB (Bolivian Boliviano)</option>
+                            <option value="BRL">BRL (Brazilian Real)</option>
+                            <option value="BSD">BSD (Bahamian Dollar)</option>
+                            <option value="BTN">BTN (Bhutanese Ngultrum)</option>
+                            <option value="BWP">BWP (Botswanan Pula)</option>
+                            <option value="BYR">BYR (Belarusian Ruble)</option>
+                            <option value="BZD">BZD (Belize Dollar)</option>
+                            <option value="CAD">CAD (Canadian Dollar)</option>
+                            <option value="CDF">CDF (Congolese Franc)</option>
+                            <option value="CHF">CHF (Swiss Franc)</option>
+                            <option value="CLP">CLP (Chilean Peso)</option>
+                            <option value="CNY">CNY (Chinese Yuan Renminbi)</option>
+                            <option value="COP">COP (Colombian Peso)</option>
+                            <option value="CRC">CRC (Costa Rican Colón)</option>
+                            <option value="CSK">CSK (Czechoslovak Hard Koruna)</option>
+                            <option value="CUC">CUC (Cuban Convertible Peso)</option>
+                            <option value="CUP">CUP (Cuban Peso)</option>
+                            <option value="CVE">CVE (Cape Verdean Escudo)</option>
+                            <option value="CYP">CYP (Cypriot Pound)</option>
+                            <option value="CZK">CZK (Czech Republic Koruna)</option>
+                            <option value="DEM">DEM (German Mark)</option>
+                            <option value="DJF">DJF (Djiboutian Franc)</option>
+                            <option value="DKK">DKK (Danish Krone)</option>
+                            <option value="DOP">DOP (Dominican Peso)</option>
+                            <option value="DZD">DZD (Algerian Dinar)</option>
+                            <option value="ECS">ECS (Ecuadorian Sucre)</option>
+                            <option value="EEK">EEK (Estonian Kroon)</option>
+                            <option value="EGP">EGP (Egyptian Pound)</option>
+                            <option value="ESP">ESP (Spanish Peseta)</option>
+                            <option value="ETB">ETB (Ethiopian Birr)</option>
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="FIM">FIM (Finnish Markka)</option>
+                            <option value="FJD">FJD (Fijian Dollar)</option>
+                            <option value="FKP">FKP (Falkland Islands Pound)</option>
+                            <option value="FRF">FRF (French Franc)</option>
+                            <option value="GBP">GBP (British Pound Sterling)</option>
+                            <option value="GEL">GEL (Georgian Lari)</option>
+                            <option value="GHS">GHS (Ghanaian Cedi)</option>
+                            <option value="GIP">GIP (Gibraltar Pound)</option>
+                            <option value="GMD">GMD (Gambian Dalasi)</option>
+                            <option value="GNF">GNF (Guinean Franc)</option>
+                            <option value="GRD">GRD (Greek Drachma)</option>
+                            <option value="GTQ">GTQ (Guatemalan Quetzal)</option>
+                            <option value="GYD">GYD (Guyanaese Dollar)</option>
+                            <option value="HKD">HKD (Hong Kong Dollar)</option>
+                            <option value="HNL">HNL (Honduran Lempira)</option>
+                            <option value="HRK">HRK (Croatian Kuna)</option>
+                            <option value="HTG">HTG (Haitian Gourde)</option>
+                            <option value="HUF">HUF (Hungarian Forint)</option>
+                            <option value="IDR">IDR (Indonesian Rupiah)</option>
+                            <option value="IEP">IEP (Irish Pound)</option>
+                            <option value="ILS">ILS (Israeli New Sheqel)</option>
+                            <option value="INR">INR (Indian Rupee)</option>
+                            <option value="IQD">IQD (Iraqi Dinar)</option>
+                            <option value="IRR">IRR (Iranian Rial)</option>
+                            <option value="ISK">ISK (Icelandic Króna)</option>
+                            <option value="ITL">ITL (Italian Lira)</option>
+                            <option value="JMD">JMD (Jamaican Dollar)</option>
+                            <option value="JOD">JOD (Jordanian Dinar)</option>
+                            <option value="JPY">JPY (Japanese Yen)</option>
+                            <option value="KES">KES (Kenyan Shilling)</option>
+                            <option value="KGS">KGS (Kyrgystani Som)</option>
+                            <option value="KHR">KHR (Cambodian Riel)</option>
+                            <option value="KMF">KMF (Comorian Franc)</option>
+                            <option value="KPW">KPW (North Korean Won)</option>
+                            <option value="KRW">KRW (South Korean Won)</option>
+                            <option value="KWD">KWD (Kuwaiti Dinar)</option>
+                            <option value="KYD">KYD (Cayman Islands Dollar)</option>
+                            <option value="KZT">KZT (Kazakhstan Tenge)</option>
+                            <option value="LAK">LAK (Laotian Kip)</option>
+                            <option value="LBP">LBP (Lebanese Pound)</option>
+                            <option value="LKR">LKR (Sri Lanka Rupee)</option>
+                            <option value="LRD">LRD (Liberian Dollar)</option>
+                            <option value="LSL">LSL (Lesotho Loti)</option>
+                            <option value="LTL">LTL (Lithuanian Litas)</option>
+                            <option value="LUF">LUF (Luxembourgian Franc)</option>
+                            <option value="LVL">LVL (Latvian Lats)</option>
+                            <option value="LYD">LYD (Libyan Dinar)</option>
+                            <option value="MAD">MAD (Moroccan Dirham)</option>
+                            <option value="MDL">MDL (Moldovan Leu)</option>
+                            <option value="MGF">MGF (Malagasy Franc)</option>
+                            <option value="MKD">MKD (Macedonian Denar)</option>
+                            <option value="MMK">MMK (Myanma Kyat)</option>
+                            <option value="MNT">MNT (Mongolian Tugrik)</option>
+                            <option value="MOP">MOP (Macanese Pataca)</option>
+                            <option value="MRO">MRO (Mauritanian Ouguiya)</option>
+                            <option value="MTL">MTL (Maltese Lira)</option>
+                            <option value="MUR">MUR (Mauritian Rupee)</option>
+                            <option value="MVR">MVR (Maldivian Rufiyaa)</option>
+                            <option value="MWK">MWK (Malawian Kwacha)</option>
+                            <option value="MXN">MXN (Mexican Peso)</option>
+                            <option value="MYR">MYR (Malaysian Ringgit)</option>
+                            <option value="MZM">MZM (Old Mozambican Metical)</option>
+                            <option value="MZN">MZN (Mozambican Metical)</option>
+                            <option value="NAD">NAD (Namibian Dollar)</option>
+                            <option value="NGN">NGN (Nigerian Naira)</option>
+                            <option value="NIO">NIO (Nicaraguan Cordoba Oro)</option>
+                            <option value="NLG">NLG (Dutch Guilder)</option>
+                            <option value="NOK">NOK (Norwegian Krone)</option>
+                            <option value="NPR">NPR (Nepalese Rupee)</option>
+                            <option value="NZD">NZD (New Zealand Dollar)</option>
+                            <option value="OMR">OMR (Omani Rial)</option>
+                            <option value="PAB">PAB (Panamanian Balboa)</option>
+                            <option value="PEN">PEN (Peruvian Nuevo Sol)</option>
+                            <option value="PGK">PGK (Papua New Guinean Kina)</option>
+                            <option value="PHP">PHP (Philippine Peso)</option>
+                            <option value="PKR">PKR (Pakistani Rupee)</option>
+                            <option value="PLN">PLN (Polish Zloty)</option>
+                            <option value="PTE">PTE (Portuguese Escudo)</option>
+                            <option value="PYG">PYG (Paraguayan Guarani)</option>
+                            <option value="QAR">QAR (Qatari Rial)</option>
+                            <option value="ROL">ROL (Old Romanian Leu)</option>
+                            <option value="RON">RON (Romanian Leu)</option>
+                            <option value="RSD">RSD (Serbian Dinar)</option>
+                            <option value="RUB">RUB (Russian Ruble)</option>
+                            <option value="SAR">SAR (Saudi Riyal)</option>
+                            <option value="SBD">SBD (Solomon Islands Dollar)</option>
+                            <option value="SCR">SCR (Seychellois Rupee)</option>
+                            <option value="SDD">SDD (Old Sudanese Dinar)</option>
+                            <option value="SDG">SDG (Sudanese Pound)</option>
+                            <option value="SDP">SDP (Old Sudanese Pound)</option>
+                            <option value="SEK">SEK (Swedish Krona)</option>
+                            <option value="SGD">SGD (Singapore Dollar)</option>
+                            <option value="SHP">SHP (Saint Helena Pound)</option>
+                            <option value="SIT">SIT (Slovenian Tolar)</option>
+                            <option value="SKK">SKK (Slovak Koruna)</option>
+                            <option value="SLL">SLL (Sierra Leonean Leone)</option>
+                            <option value="SOS">SOS (Somali Shilling)</option>
+                            <option value="SRD">SRD (Surinamese Dollar)</option>
+                            <option value="SRG">SRG (Suriname Guilder)</option>
+                            <option value="STD">STD (São Tomé and Príncipe Dobra)</option>
+                            <option value="SVC">SVC (Salvadoran Colón)</option>
+                            <option value="SYP">SYP (Syrian Pound)</option>
+                            <option value="SZL">SZL (Swazi Lilangeni)</option>
+                            <option value="THB">THB (Thai Baht)</option>
+                            <option value="TMM">TMM (Turkmenistani Manat)</option>
+                            <option value="TND">TND (Tunisian Dinar)</option>
+                            <option value="TOP">TOP (Tongan Paʻanga)</option>
+                            <option value="TRL">TRL (Old Turkish Lira)</option>
+                            <option value="TRY">TRY (Turkish Lira)</option>
+                            <option value="TTD">TTD (Trinidad and Tobago Dollar)</option>
+                            <option value="TWD">TWD (New Taiwan Dollar)</option>
+                            <option value="TZS">TZS (Tanzanian Shilling)</option>
+                            <option value="UAH">UAH (Ukrainian Hryvnia)</option>
+                            <option value="USD" selected="selected">USD (US Dollar)</option>
+                            <option value="UYU">UYU (Uruguayan Peso)</option>
+                            <option value="UZS">UZS (Uzbekistan Som)</option>
+                            <option value="VEF">VEF (Venezuelan Bolívar Fuerte)</option>
+                            <option value="VND">VND (Vietnamese Dong)</option>
+                            <option value="VUV">VUV (Vanuatu Vatu)</option>
+                            <option value="WST">WST (Samoan Tala)</option>
+                            <option value="XAF">XAF (CFA Franc BEAC)</option>
+                            <option value="XCD">XCD (East Caribbean Dollar)</option>
+                            <option value="XOF">XOF (CFA Franc BCEAO)</option>
+                            <option value="XPF">XPF (CFP Franc)</option>
+                            <option value="YER">YER (Yemeni Rial)</option>
+                            <option value="YUN">YUN (Yugoslavian Convertible Dinar)</option>
+                            <option value="ZAR">ZAR (South African Rand)</option>
+                            <option value="ZMK">ZMK (Zambian Kwacha)</option>
+                            <option value="ZWD">ZWD (Zimbabwean Dollar)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inline NFormat">
+                    <p><a data-tip="Select how numbers will be displayed. Note that limited space on the pass may cause longer formats to be truncated.">Number Format</a>
+                    </p>
+                    <div class="styled-select">
+                        <select id="p1Nformat" class="dataFormat" data-sid="p1V" name="p1nf">
+                            <option value="decimal" selected="selected">Decimal</option>
+                            <option value="percentage">Percentage</option>
+                            <option value="scientific">Scientific</option>
+                            <option value="spell">Spell Out</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inline DFormat">
+                    <p><a data-tip="Select how dates and times will be displayed. Note that limited space on the pass may cause longer formats to be truncated.">Date/Time Format</a>
+                    </p>
+                    <div class="styled-select">
+                        <select id="p1Dformat" class="dataFormat" data-sid="p1V" name="p1df">
+                            <option value="short">Short</option>
+                            <option value="medium" selected="selected">Medium</option>
+                            <option value="long">Long</option>
+                            <option value="full">Full</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inline DRelative">
+                    <p><a data-tip="Check this option to display dates relative to the current time (E.g. display 'Today' instead of 'July 4 2013')">Relative Date</a>
+                    </p>
+                    <p class="foo">
+                        <input type="checkbox" id="p1Relative" value="1" name="p1r" class="">
+                        <label for="p1Relative">&nbsp;Display relatively</label>
+                    </p>
+                </div>
+                <div class="inline DRelative">
+                    <p><a data-tip="Do not adjust the date to account for the device timezone.">Ignore timezone<span class="ios7"></span></a>
+                    </p>
+                    <p class="foo">
+                        <input type="checkbox" id="p1Itz" value="1" name="p1z" class="">
+                        <label for="p1Itz">&nbsp;</label>
+                    </p>
+                </div>
+            </div>
+        </details>
+    </fieldset>
+</div>
+
 <div id="h1fsH" class="fieldsetHolder" data-cstatus="false">
                                     <fieldset id="h1fields" name="h1">
                                         <div class="sortableFieldHandle ui-corner-all ui-icon-arrowthick-2-n-s"></div>
