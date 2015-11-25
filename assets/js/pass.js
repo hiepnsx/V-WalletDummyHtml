@@ -292,7 +292,6 @@ function clickEvents() {
 
     $("#next").click(function() {
         $("#progress_bar .active").next().click();
-        console.log("click");
     });
     $("#pre").click(function() {
         $("#progress_bar .active").prev().click();
