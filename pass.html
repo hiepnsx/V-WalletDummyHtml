@@ -68,7 +68,7 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th><input type="checkbox" name="all"</th>
+                        <th><input type="checkbox" id="select-all"</th>
                         <th>パス</th>
                         <th>ユーザー数</th>
                         <th>送ったメッセージ</th>
@@ -310,18 +310,56 @@
           });
         });
         $.getScript("assets/js/app.min.js");
-
-        $('input[name="all"]').click(function(){
-          var $that = $(this);
-          $(':checkbox').each(function() {
-            this.checked = $that.is(':checked');
-          });
-        });
       });
     </script>
     <script>
       $(function () {
-        $("#example1").DataTable();
+        var table = $("#example1").DataTable({
+          "language": {
+            "sEmptyTable":     "テーブルにデータがありません",
+            "sInfo":           " _TOTAL_ 件中 _START_ から _END_ まで表示",
+            "sInfoEmpty":      " 0 件中 0 から 0 まで表示",
+            "sInfoFiltered":   "（全 _MAX_ 件より抽出）",
+            "sInfoPostFix":    "",
+            "sInfoThousands":  ",",
+            "sLengthMenu":     "_MENU_ 件表示",
+            "sLoadingRecords": "読み込み中...",
+            "sProcessing":     "処理中...",
+            "sSearch":         "検索:",
+            "sZeroRecords":    "一致するレコードがありません",
+            "oPaginate": {
+                "sFirst":    "先頭",
+                "sLast":     "最終",
+                "sNext":     "次へ",
+                "sPrevious": "前へ"
+            },
+            "oAria": {
+              "sSortAscending":  ": 列を昇順に並べ替えるにはアクティブにする",
+              "sSortDescending": ": 列を降順に並べ替えるにはアクティブにする"
+            }
+          }
+        });
+
+         // Handle click on "Select all" control
+        $('#select-all').on('click', function(){
+            // Check/uncheck all checkboxes in the table
+            var rows = table.rows({ 'search': 'applied' }).nodes();
+            $('input[type="checkbox"]', rows).prop('checked', this.checked);
+        });
+
+        // Handle click on checkbox to set state of "Select all" control
+        $('#example tbody').on('change', 'input[type="checkbox"]', function(){
+          // If checkbox is not checked
+          if(!this.checked){
+            var el = $('#select-all').get(0);
+            // If "Select all" control is checked and has 'indeterminate' property
+            if(el && el.checked && ('indeterminate' in el)){
+              // Set visual state of "Select all" control
+              // as 'indeterminate'
+              el.indeterminate = true;
+            }
+          }
+        });
       });
     </script>
   </body>
