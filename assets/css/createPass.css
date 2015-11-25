@@ -5722,3 +5722,6 @@ table.dataTable thead td:active {
 .toggle input:checked+label:after {
     content: " On"
 }
+.ui-dialog {
+    z-index:1000000 !important; /* The default is 100. !important overrides the default. */
+}

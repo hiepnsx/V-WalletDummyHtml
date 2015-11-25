@@ -291,10 +291,39 @@ function clickEvents() {
     });
 
     $("#next").click(function() {
-        $("#progress_bar .active").next().click();
+        var current = $("#progress_bar .active");
+        if(current.attr("data-show") == "bcontent") {
+            $("#save").click();
+        }
+        current.next().click();
     });
     $("#pre").click(function() {
         $("#progress_bar .active").prev().click();
+    });
+    $("#save").click(function() {
+   $('body').append('<div id="yesno_dialog" title="パスを保存する"><p>このパスを保存しますか。</p></div>');
+    $("#yesno_dialog").dialog({
+        title: "パスを保存する",
+        resizable: false,
+        modal: true,
+        buttons: {
+            "はい" : function () {
+                if (window.location.host == "localhost") {
+                window.location = "http://localhost/wallet/pass.html";
+                } else {
+                window.location = "http://hiepnsx.github.io/V-WalletDummyHtml/pass.html";
+                }
+
+                $(this).dialog("close");
+                $(this).remove();
+            },
+            "いいえ" : function (){
+                $(this).dialog("close");
+                $(this).remove();
+            }
+
+        }
+    });
     });
 
 }
