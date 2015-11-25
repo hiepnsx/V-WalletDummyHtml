@@ -68,6 +68,7 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
+                        <th><input type="checkbox" name="all"</th>
                         <th>パス</th>
                         <th>ユーザー数</th>
                         <th>送ったメッセージ</th>
@@ -78,6 +79,7 @@
                     </thead>
                     <tbody>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 1</a></td>
                         <td>100</td>
                         <td>500</td>
@@ -90,6 +92,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 2</a></td>
                         <td>200</td>
                         <td>400</td>
@@ -102,6 +105,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 1</a></td>
                         <td>100</td>
                         <td>500</td>
@@ -114,6 +118,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 2</a></td>
                         <td>200</td>
                         <td>400</td>
@@ -126,6 +131,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 1</a></td>
                         <td>100</td>
                         <td>500</td>
@@ -138,6 +144,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 2</a></td>
                         <td>200</td>
                         <td>400</td>
@@ -150,6 +157,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 1</a></td>
                         <td>100</td>
                         <td>500</td>
@@ -162,6 +170,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 2</a></td>
                         <td>200</td>
                         <td>400</td>
@@ -174,6 +183,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 1</a></td>
                         <td>100</td>
                         <td>500</td>
@@ -186,6 +196,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 2</a></td>
                         <td>200</td>
                         <td>400</td>
@@ -198,6 +209,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 1</a></td>
                         <td>100</td>
                         <td>500</td>
@@ -210,6 +222,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 2</a></td>
                         <td>200</td>
                         <td>400</td>
@@ -222,6 +235,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 1</a></td>
                         <td>100</td>
                         <td>500</td>
@@ -234,6 +248,7 @@
                         </td>
                       </tr>
                       <tr>
+                        <td><input type="checkbox" name="selectedPass[]"</td>
                         <td><a href="pass_detail.html">Pass 2</a></td>
                         <td>200</td>
                         <td>400</td>
@@ -295,6 +310,13 @@
           });
         });
         $.getScript("assets/js/app.min.js");
+
+        $('input[name="all"]').click(function(){
+          var $that = $(this);
+          $(':checkbox').each(function() {
+            this.checked = $that.is(':checked');
+          });
+        });
       });
     </script>
     <script>
