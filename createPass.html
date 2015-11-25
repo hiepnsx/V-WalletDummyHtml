@@ -93,7 +93,7 @@
     </style>
 
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-blue sidebar-mini eventTicket bg ht">
     <div class="wrapper hold-transition skin-blue sidebar-mini">
     <div class="include" data-include="header"></div>
     <div class="include" data-include="left_sidebar"></div>
@@ -144,7 +144,7 @@
                 <!-- Buttons -->
                 <div class="lb"></div>
                 <div class="rb" data-function="new"></div>
-                <div class="titleText">Coupon</div>
+                <div class="titleText"></div>
 
                 <!-- Screen Container -->
                 <div class="sc">
@@ -153,12 +153,7 @@
                     <div id="pc">
                         <div id="pass" class="pass" style="background: rgb(109, 110, 113);">
                             <!-- Masks -->
-                            <div class="couponTop"></div>
-                            <div class="couponBottom"></div>
                             <div class="eventTicketTop"></div>
-                            <div class="storeTop"></div>
-                            <div class="boardingTop"></div>
-                            <div class="genericTop"></div>
                             <img class="eventImage" src="https://d1v6vxpmctmtey.cloudfront.net/images/cache/qqPgeIP1MgCB8sH09LICYbe.png" alt="Background">
 
                             <!-- Graphics -->
@@ -167,9 +162,7 @@
                                 <!-- <img src="images/z50.gif" alt="" class="z" /> -->
                                 <p id="logoText"></p>
                             </div>
-                            <div id="transport" class="transport gen"></div>
                             <div class="back" style="background-image: url('https://d1v6vxpmctmtey.cloudfront.net/images/51EcgTXDLLQdTkhMuR5l7Es.png');"></div>
-                            <div class="stripShine"></div>
                             <div class="thumbnail">
                                 <div class="tinner">
                                     <img id="thumbnail" src="https://d1v6vxpmctmtey.cloudfront.net/images/S9S4TVjp1S9bzOZngq78Ot.png" alt="Thumbnail">
@@ -221,25 +214,11 @@
                                     <span id="a1V" class="foreground a1" style="display: none; text-align: left;"></span><span id="a2V" class="foreground a2" style="display: none; text-align: left;"></span><span id="a3V" class="foreground a3" style="display: none; text-align: left;"></span><span id="a4V" class="foreground a4" style="display: none; text-align: left;"></span><span id="a5V" class="foreground a5" style="display: none; text-align: left;"></span>
                                 </div>
                             </div>
-                            <!-- Barcode -->
-                            <div class="barcodeOuter">
-                                <img id="footerImage" src="https://d1v6vxpmctmtey.cloudfront.net/images/3WhvStwGEXBzFztWiD6HOGf.png" alt="Footer">
-                                <div class="barcodeHack">
-                                    <div id="barcodeContainer" class="pdf417">
-                                        <div id="barcode">
-                                            <img src="https://d1ye292yvr7tf6.cloudfront.net/images/barcode.php?m=https%3A%2F%2FPassKit.com&amp;f=pdf417" alt="Barcode">
-                                        </div>
-                                        <p id="barcodeText">PassKit.com</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                         <div id="back" class="pass animate backPass" style="background: rgb(109, 110, 113);">
 
                             <!-- Masks -->
-                            <div class="couponTop"></div>
-                            <div class="storeTop"></div>
                             <img class="eventImage" src="https://d1v6vxpmctmtey.cloudfront.net/images/cache/qqPgeIP1MgCB8sH09LICYbe.png" alt="Background">
                             <p class="update bdone label">never updated</p>
                             <button class="done bdone label">Done</button>
@@ -307,7 +286,7 @@
                 <ul class="pointers">
                     <li class="hEdit active" style="display: none;"></li>
                     <li class="pEdit" style="display: none;"></li>
-                    <li class="sEdit" style="display: list-item;"></li>
+                    <li class="sEdit" style="display: none;"></li>
                     <li class="aEdit" style="display: none;"></li>
                     <li class="bEdit" style="display: none;"></li>
                 </ul>
@@ -322,55 +301,6 @@
             <form id="afr">
                 <div id="config" class="pane" style="display: block;">
                     <div class="face" id="dscroll">
-                        <p class="title">Passタイプ選択</p>
-                        <div class="passTypes">
-                            <div class="passType" id="transportType">
-                                <p>
-                                    <input type="radio" class="passT" id="boardingPassType" name="pt" value="boardingPass">
-                                    <label for="boardingPassType">Transit
-                                        <br>
-                                        <img src="https://d1ye292yvr7tf6.cloudfront.net/images/PFR-transport.png" alt="Boarding Pass" class="passTypeImg" data-pass="boardingPass">
-                                    </label>
-                                </p>
-                            </div>
-                            <div class="passType">
-                                <p>
-                                    <input type="radio" class="passT" id="couponType" checked="checked" name="pt" value="coupon">
-                                    <label for="couponType">Coupon
-                                        <br>
-                                        <img src="https://d1ye292yvr7tf6.cloudfront.net/images/PFR-coupon.png" alt="Coupon" class="passTypeImg selected" data-pass="coupon">
-                                    </label>
-                                </p>
-                            </div>
-                            <div class="passType">
-                                <p>
-                                    <input type="radio" class="passT" id="storeCardType" name="pt" value="storeCard">
-                                    <label for="storeCardType">Store Card
-                                        <br>
-                                        <img src="https://d1ye292yvr7tf6.cloudfront.net/images/PFR-Store-Card.png" alt="Store Card" class="passTypeImg" data-pass="storeCard">
-                                    </label>
-                                </p>
-                            </div>
-                            <div class="passType">
-                                <p>
-                                    <input type="radio" class="passT" id="genericType" name="pt" value="generic">
-                                    <label for="genericType">Membership
-                                        <br>
-                                        <img src="https://d1ye292yvr7tf6.cloudfront.net/images/PFR-member.png" alt="Generic Pass" class="passTypeImg" data-pass="generic">
-                                    </label>
-                                </p>
-                            </div>
-                            <div class="passType">
-                                <p>
-                                    <input type="radio" class="passT" id="eventType" name="pt" value="eventTicket">
-                                    <label for="eventType">Event Ticket
-                                        <br>
-                                        <img src="https://d1ye292yvr7tf6.cloudfront.net/images/PFR-ticket-blur.png" alt="Event Ticket" class="passTypeImg" data-pass="eventTicket">
-                                    </label>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
                         <fieldset id="ettCont">
                             <p class="fieldLabel fieldStrip"><a data-tip="Please select the type of Event Ticket you would like to create">タイプ</a><span class="rqd">*</span>
                             </p>
@@ -393,7 +323,7 @@
 
                         <fieldset id="configFields" name="config">
 
-                            <label class="fieldLabel" for="orgName"><a data-tip="会社名">会社名</a><span class="rqd">*</span>
+                            <label class="fieldLabel" for="orgName"><a data-tip="パス名">パス名</a><span class="rqd">*</span>
                             </label>
                             <input class="fieldFull" type="text" maxlength="30" id="orgName" name="orgName" value="" required="" placeholder="Required">
 
@@ -5001,181 +4931,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="contentBarcode">
-                        <div class="faceField" id="bEdit">
-                            <p class="introt">Each pass may contain a barcode that can be scanned by the pass issuer to identify a pass or to trigger some sort of action (E.g. update a field on the pass and push an update). Apple Wallet supports 4 types of barcode. Which barcode is most appropriate will depend upon the amount of information you wish to encode, the capability of your scanning technology and the design of your pass.</p>
-                            <p>Square barcodes (Aztec and QR Code) work better for large messages but reduce the amount of other information the pass can display for certain pass types. Code 128 Barcodes require a fallback fro devices running iOS 8 or earlier.</p>
-                            <fieldset>
-                                <div class="inline">
-                                    <p><a data-tip="When selecting a barcode type, be sure to ensure that your scanners have the ability to read that type">Barcode Type</a>
-                                    </p>
-                                    <div class="styled-select">
-                                        <select id="barcodeType" name="bct">
-                                            <option value="aztec">Aztec Code</option>
-                                            <option value="pdf417" selected="selected">PDF417 Code</option>
-                                            <option value="qr">QR Code</option>
-                                            <option value="code128a">Code128 + Aztec Code</option>
-                                            <option value="code128p">Code128 + PDF417 Code</option>
-                                            <option value="code128q">Code128 + QR Code</option>
-                                            <option value="none">Do not display a barcode</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="inline">
-                                    <p><a data-tip="Select what information to encode into the barcode. For convenience, we have created some defaults. You can include the pass serial number by adding %@ in your message">Encoded Message</a>
-                                    </p>
-                                    <div class="styled-select">
-                                        <select id="barcodeAction" name="bca">
-                                            <option value="serial">Encode the pass serial number</option>
-                                            <option value="pid">Encode the pass unique ID</option>
-                                            <option value="url" selected="selected">Encode the URL to update the pass</option>
-                                            <option value="input">Enter when a pass is created</option>
-                                            <option value="custom">Encode the same message on each pass</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div id="fixedBarcode" class="inline">
-                                    <p><a data-tip="This text will be encoded into the barcode, if you want the barcode to link to a webpage, enter a URL starting with http:// or https:// <br /> If the barcode will be unique to each pass, please leave blank">Text to Encode</a>
-                                    </p>
-                                    <textarea class="fieldFull" maxlength="600" id="barcodeMessage" name="bcm" placeholder="Enter the text to encode. Use %@ to include the pass serial number">https://PassKit.com</textarea>
-                                </div>
-                                <div class="inline">
-                                    <p><a data-tip="Select what text to display under the barcode. This may help the pass issuer in cases where a pass does not scan.">Alternative Text</a>
-                                    </p>
-                                    <div class="styled-select">
-                                        <select id="barcodeAltText" name="bcx">
-                                            <option value="mirror">Display the barcode contents</option>
-                                            <option value="serial" selected="selected">Display the pass serial number</option>
-                                            <option value="pid">Display the pass unique ID</option>
-                                            <option value="input">Enter when a pass is created</option>
-                                            <option value="custom">Display the same message on each pass</option>
-                                            <option value="none">Do not display any alternate text</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div id="fixedBarcodeAlt" class="inline">
-                                    <p><a data-tip="This field may also be used to provide additional information to the passholder such as 'Admits one only'">Text to Display</a>
-                                    </p>
-                                    <input type="text" class="fieldFull" maxlength="50" id="barcodeAlt" name="bcxm" value="https://PassKit.com" placeholder="Enter the text to display. Use %@ to include the pass serial number">
-                                </div>
-                                <details>
-                                    <summary role="button" aria-expanded="false">Advanced Options</summary>
-                                    <div class="inline">
-                                        <p><a data-tip="Only required if your encoded message is not compatible with<BR />ISO_8859-1. Ensure scanner or software support before changing">Encoding Format</a>
-                                        </p>
-                                        <div class="styled-select">
-                                            <select id="encoding" class="encoding" name="bce">
-                                                <option>ANSI_X3.4-1968</option>
-                                                <option>Big5</option>
-                                                <option>Big5-HKSCS</option>
-                                                <option>CP51932</option>
-                                                <option>EUC-KR</option>
-                                                <option>Extended_UNIX_Code_Packed_Format_for_Japanese</option>
-                                                <option>GB18030</option>
-                                                <option>GB2312</option>
-                                                <option>GBK</option>
-                                                <option>HZ-GB-2312</option>
-                                                <option>IBM037</option>
-                                                <option>IBM437</option>
-                                                <option>IBM775</option>
-                                                <option>IBM850</option>
-                                                <option>IBM851</option>
-                                                <option>IBM852</option>
-                                                <option>IBM855</option>
-                                                <option>IBM857</option>
-                                                <option>IBM860</option>
-                                                <option>IBM861</option>
-                                                <option>IBM862</option>
-                                                <option>IBM863</option>
-                                                <option>IBM864</option>
-                                                <option>IBM865</option>
-                                                <option>IBM866</option>
-                                                <option>IBM869</option>
-                                                <option>ISO_8859-1</option>
-                                                <option>ISO_8859-2</option>
-                                                <option>ISO_8859-3</option>
-                                                <option>ISO_8859-4</option>
-                                                <option>ISO_8859-5</option>
-                                                <option>ISO_8859-6-E</option>
-                                                <option>ISO_8859-6-I</option>
-                                                <option>ISO_8859-6</option>
-                                                <option>ISO_8859-7</option>
-                                                <option>ISO_8859-8-E</option>
-                                                <option>ISO_8859-8-I</option>
-                                                <option>ISO_8859-8</option>
-                                                <option>ISO_8859-9</option>
-                                                <option>ISO-10646-UCS-2</option>
-                                                <option>ISO-10646-UCS-4</option>
-                                                <option>ISO-2022-CN</option>
-                                                <option>ISO-2022-CN-EXT</option>
-                                                <option>ISO-2022-JP</option>
-                                                <option>ISO-2022-JP-2</option>
-                                                <option>ISO-2022-KR</option>
-                                                <option>ISO-8859-1-Windows-3.0-Latin-1</option>
-                                                <option>ISO-8859-1-Windows-3.1-Latin-1</option>
-                                                <option>ISO-8859-10</option>
-                                                <option>ISO-8859-13</option>
-                                                <option>ISO-8859-14</option>
-                                                <option>ISO-8859-15</option>
-                                                <option>ISO-8859-16</option>
-                                                <option>ISO-8859-2-Windows-Latin-2</option>
-                                                <option>ISO-8859-9-Windows-Latin-5</option>
-                                                <option>JIS_Encoding</option>
-                                                <option>KOI8-R</option>
-                                                <option>KOI8-U</option>
-                                                <option>KS_C_5601-1987</option>
-                                                <option>macintosh</option>
-                                                <option>Shift_JIS</option>
-                                                <option>TIS-620</option>
-                                                <option>UNICODE-1-1-UTF-7</option>
-                                                <option>UTF-16</option>
-                                                <option>UTF-16BE</option>
-                                                <option>UTF-16LE</option>
-                                                <option>UTF-32</option>
-                                                <option>UTF-32BE</option>
-                                                <option>UTF-32LE</option>
-                                                <option>UTF-7</option>
-                                                <option selected="selected">UTF-8</option>
-                                                <option>windows-1250</option>
-                                                <option>windows-1251</option>
-                                                <option>windows-1252</option>
-                                                <option>windows-1253</option>
-                                                <option>windows-1254</option>
-                                                <option>windows-1255</option>
-                                                <option>windows-1256</option>
-                                                <option>windows-1257</option>
-                                                <option>windows-1258</option>
-                                                <option>windows-874</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div id="bccert" class="inline" style="display:none;">
-                                        <hr>
-                                        <h3>PassKit Barcode Encryption Key</h3>
-                                        <p><a data-tip="This public key is required to decrypt barcodes where the encryption option above is set">Barcode Key</a>
-                                        </p>
-                                        <p id="barcodeCert">
-                                            <br>
-                                        </p>
-                                    </div>
-                                    <hr class="clear">
-                                    <h3>PassVerifier App Encryption</h3>
-                                    <p>If you would like to digitally sign your Barcodes for use with <a href="http://www.passverifier.com" target="_blank" title="Pass Verifier App" rel="nofollow">Pass Verifier App</a>, please enter your Pass Verifier credentials below. To stop signing passes, delete your credentials.</p>
-                                    <br>
-                                    <div class="inline">
-                                        <p><a data-tip="Please provide your Pass Verifier App Issuer ID that you received when you registered as an Issuer wit Pass Verifier App">Issuer ID</a>
-                                        </p>
-                                        <input type="text" class="fieldFull" maxlength="10" id="pvi" name="pvi" value="" placeholder="Issuer ID, E.g. PK">
-                                    </div>
-                                    <div class="inline">
-                                        <p><a data-tip="Please provide your Pass Verifier App Issuer Secret that you received when you registered as an Issuer wit Pass Verifier App">Issuer Secret</a>
-                                        </p>
-                                        <input type="text" class="fieldFull" maxlength="24" id="pvs" name="pvs" value="" placeholder="Issuer Secret, E.g. aBcdeFgHijKLMnoPQrStuV==">
-                                    </div>
-                                </details>
-                            </fieldset>
-                        </div>
-                    </div>
+
                 </div>
                 <div id="bcontent" class="pane" style="display: none;">
                     <div id="backFields" class="faceField" style="min-height: 771px;">
@@ -5367,10 +5123,7 @@
                                         <div class="instructions"></div>
                                         <input id="da5" type="file" name="xfile" class="droparea ds5 imageDrag" data-post="ajax.php" data-a="pi" data-it="s" data-ide="is" accept="image/*"><img src="https://d1v6vxpmctmtey.cloudfront.net/images/51EcgTXDLLQdTkhMuR5l7Es.png" alt="">
                                     </div><span class="remove"><a id="iss5" class="clearImage" data-fid="is" data-tip="Remove image">X</a></span>
-<!--                                     <p class="foo">
-                                        <input type="checkbox" id="ss" value="1" name="ss">
-                                        <label for="ss">&nbsp;Suppress Shine Effect</label>
-                                    </p> -->
+
                                     <p class="stcsc">ストリップ画像のサイズ：> 640x640</p>
                                     <p class="stet">ストリップ画像のサイズ：> 640x640</p>
                                 </div>
@@ -5438,6 +5191,16 @@
 
           </div>
         </section>
+    <div class="row" style="padding-bottom:5px;">
+            <div class="control_button col-md-offset-7">
+                <div class="col-md-3">
+                <button class="btn btn-primary btn-sm hide" id="pre"><i class="fa fa-backward"></i>&nbsp;&nbsp;&nbsp;前へ</button>
+                </div>
+                <div class="col-md-3">
+                <button class="btn btn-primary btn-sm" id="next">次へ&nbsp;&nbsp;&nbsp;<i class="fa fa-forward"></i></button>
+                </div>
+            </div>
+    </div>
 
 
       </div><!-- /.content-wrapper -->
@@ -5459,7 +5222,7 @@
     <!--  <script src="assets/js/app.min.js"></script> -->
     <!-- SlimScroll 1.3.0 -->
     <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/createPass.js"></script>
+    <script src="assets/js/pass.js"></script>
 
     <script>
       $(function(){

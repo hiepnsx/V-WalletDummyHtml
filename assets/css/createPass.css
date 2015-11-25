@@ -3104,7 +3104,6 @@ fieldset:not(.toggle) {
     padding-left: 13px!important
 }
 #ettCont {
-    display: none;
     background: 0;
     border: 0;
     margin: 0;

@@ -3491,60 +3491,60 @@ function clickEvents() {
             scrollTop: $(this).offset().top + 50
         }, 1000)
     });
-    $(".passTypeImg").click(function() {
-        if ($(this).attr("data-pass") !== $("input:radio[name='pt']:checked").val()) {
-            $("#pass").toggleClass("animate");
-            $("#pass").slideToggle(300, function(f) {
-                var c = window.passNames;
-                var d = $("input:radio[name='pt']:checked").val();
-                strip = ($("#etts").prop("checked") && d === "eventTicket");
-                $(".titleText").html(c[d]);
-                if (d === "eventTicket") {
-                    $("#ettCont").fadeIn()
-                } else {
-                    $("#ettCont").fadeOut()
-                }
-                $("body").switchClass($("body").attr("class"), d, 10, function() {
-                    $(".sEdit").hide();
-                    if (strip) {
-                        $("body").addClass("strip")
-                    } else {
-                        if ($("#ib").val().length > 0 && d === "eventTicket") {
-                            $("body").addClass("bg")
-                        }
-                    }
-                    if ($("#it").val().length && !strip) {
-                        $("body").addClass("ht")
-                    }
-                    if ((d === "coupon" || d === "storeCard" || (d === "eventTicket" && $("#etts").prop("checked"))) && $("#is").val()) {
-                        $("body").addClass("simg");
-                        $("body").removeClass("ht")
-                    }
-                    if (d === "storeCard") {
-                        $(".nfc").hide()
-                    } else {
-                        $(".nfc").hide()
-                    }
-                    if ($("#ss").prop("checked")) {
-                        $(".stripShine").hide()
-                    }
-                    if (is_square()) {
-                        $("body").addClass("sq")
-                    }
-                    checkBackgroundImages();
-                    setup_sim($(this).attr("data-pass"));
-                    $("#pass").stop().slideToggle("slow", function() {
-                        $("#pass").toggleClass("animate")
-                    })
-                })
-            });
-            $(".passTypeImg").removeClass("selected");
-            $(this).addClass("selected");
-            typewatch(function() {
-                window.justifyAll(false)
-            }, 500)
-        }
-    });
+    // $(".passTypeImg").click(function() {
+    //     if ($(this).attr("data-pass") !== $("input:radio[name='pt']:checked").val()) {
+    //         $("#pass").toggleClass("animate");
+    //         $("#pass").slideToggle(300, function(f) {
+    //             var c = window.passNames;
+    //             var d = $("input:radio[name='pt']:checked").val();
+    //             strip = ($("#etts").prop("checked") && d === "eventTicket");
+    //             $(".titleText").html(c[d]);
+    //             if (d === "eventTicket") {
+    //                 $("#ettCont").fadeIn()
+    //             } else {
+    //                 $("#ettCont").fadeOut()
+    //             }
+    //             $("body").switchClass($("body").attr("class"), d, 10, function() {
+    //                 $(".sEdit").hide();
+    //                 if (strip) {
+    //                     $("body").addClass("strip")
+    //                 } else {
+    //                     if ($("#ib").val().length > 0 && d === "eventTicket") {
+    //                         $("body").addClass("bg")
+    //                     }
+    //                 }
+    //                 if ($("#it").val().length && !strip) {
+    //                     $("body").addClass("ht")
+    //                 }
+    //                 if ((d === "coupon" || d === "storeCard" || (d === "eventTicket" && $("#etts").prop("checked"))) && $("#is").val()) {
+    //                     $("body").addClass("simg");
+    //                     $("body").removeClass("ht")
+    //                 }
+    //                 if (d === "storeCard") {
+    //                     $(".nfc").hide()
+    //                 } else {
+    //                     $(".nfc").hide()
+    //                 }
+    //                 if ($("#ss").prop("checked")) {
+    //                     $(".stripShine").hide()
+    //                 }
+    //                 if (is_square()) {
+    //                     $("body").addClass("sq")
+    //                 }
+    //                 checkBackgroundImages();
+    //                 setup_sim($(this).attr("data-pass"));
+    //                 $("#pass").stop().slideToggle("slow", function() {
+    //                     $("#pass").toggleClass("animate")
+    //                 })
+    //             })
+    //         });
+    //         $(".passTypeImg").removeClass("selected");
+    //         $(this).addClass("selected");
+    //         typewatch(function() {
+    //             window.justifyAll(false)
+    //         }, 500)
+    //     }
+    // });
     $("#ss").on("click", function() {
         if ($(this).prop("checked")) {
             $(".stripShine").fadeOut()
@@ -3563,9 +3563,12 @@ function clickEvents() {
         }
         if ($(this).attr("data-show") === "config") {
             $("#editor").removeClass("wideEditor");
-            $("#editor").addClass("wideEditor")
+            $("#editor").addClass("wideEditor");
+            $("#pre").removeClass("hide");
+            $("#pre").addClass("hide");
         } else {
-            $("#editor").removeClass("wideEditor")
+            $("#editor").removeClass("wideEditor");
+            $("#pre").removeClass("hide");
         }
         if ($(this).attr("data-show") !== "content") {
             $(".pointers").children().fadeOut()
