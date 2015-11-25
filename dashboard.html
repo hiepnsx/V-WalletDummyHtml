@@ -49,7 +49,7 @@
               <div class="info-box">
                 <span class="info-box-icon bg-aqua"><i class="fa fa-book"></i></span>
                 <div class="info-box-content">
-                  <span class="info-box-text">Pass</span>
+                  <span class="info-box-text">パス数</span>
                   <span class="info-box-number">90</span>
                 </div><!-- /.info-box-content -->
               </div><!-- /.info-box -->
@@ -107,7 +107,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Pass 1</td>
+                        <td>パス 1</td>
                         <td>100</td>
                         <td>500</td>
                         <td> 100</td>
@@ -205,15 +205,6 @@
                         <td><span class="label label-danger">無効</span></td>
                       </tr>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>Pass</th>
-                        <th>ユーザー</th>
-                        <th>送ったメッセージ</th>
-                        <th>スケジュールメッセージ</th>
-                        <th>状態</th>
-                      </tr>
-                    </tfoot>
                   </table>
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
@@ -254,7 +245,31 @@
     </script>
     <script>
       $(function () {
-        $("#example1").DataTable();
+        $("#example1").DataTable({
+          "language": {
+            "sEmptyTable":     "テーブルにデータがありません",
+            "sInfo":           " _TOTAL_ 件中 _START_ から _END_ まで表示",
+            "sInfoEmpty":      " 0 件中 0 から 0 まで表示",
+            "sInfoFiltered":   "（全 _MAX_ 件より抽出）",
+            "sInfoPostFix":    "",
+            "sInfoThousands":  ",",
+            "sLengthMenu":     "_MENU_ 件表示",
+            "sLoadingRecords": "読み込み中...",
+            "sProcessing":     "処理中...",
+            "sSearch":         "検索:",
+            "sZeroRecords":    "一致するレコードがありません",
+            "oPaginate": {
+                "sFirst":    "先頭",
+                "sLast":     "最終",
+                "sNext":     "次へ",
+                "sPrevious": "前へ"
+            },
+            "oAria": {
+              "sSortAscending":  ": 列を昇順に並べ替えるにはアクティブにする",
+              "sSortDescending": ": 列を降順に並べ替えるにはアクティブにする"
+            }
+          }
+        });
       });
     </script>
   </body>
